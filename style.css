@@ -1,1 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('F2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.start-container,
+.quiz-container,
+.name-container,
+.leaderboard-container {
+    background: white;
+    background-color: powderblue;
+    width: 40%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.leaderboard-container {
+    width: 30%;
+    max-width: 450px;
+    border: 2px solid #007BFF;
+}
+
+.hidden {
+    display: none;
+}
+
+.option {
+    background-color: blue;
+    color: white;
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.option.correct {
+    background-color: green !important;
+}
+
+.option.wrong {
+    background-color: red !important;
+}
+
+.option:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 250px;
+}
+
+.btn:hover {
+    background-color: darkblue;
+}
+
+#play-again-btn, #clear-leaderboard-btn {
+    background-color: #28a745;
+}
+
+#play-again-btn:hover, #clear-leaderboard-btn:hover {
+    background-color: #218838;
+}
+
+.leaderboard-container h2 {
+    font-size: 24px;
+    color: #007BFF;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.leaderboard-container h2::before {
+    content: "🏆"; 
+    font-size: 28px;
+}
+
+/* Decreased size of input box for entering name */
+.input-small {
+    width: 100%;
+    padding: 8px; /* Smaller padding */
+    font-size: 14px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Timer circular progress bar inside quiz card */
+.timer-container {
+    position: relative;
+    width: 60px; /* Decreased size of timer */
+    height: 60px;
+    border-radius: 50%;
+    border: 6px solid #dcdcdc; /* Background color of the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.timer-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0deg 360deg, /* Green color for the full circle initially */
+        #f44336 360deg 360deg /* Red starts at 360 degrees */
+    );
+    transform: rotate(0deg); /* Start the circle from the top */
+}
+
+.timer-text {
+    position: absolute;
+    font-size: 14px; /* Smaller font size for timer */
+    color: #333;
+}
+
+#timer {
+    font-size: 14px; /* Smaller size for timer text */
+    color: #333;
+}
+
+/* Optional: Change color of the timer as it gets low */
+#timer.low-time {
+    color: red;
+}
 
