@@ -22,14 +22,21 @@
             <div id="options-container"></div>
         </div>
         <p>Question <span id="current-question-number"></span> / 10</p>
-        <p>Time Left: <span id="timer">20</span> seconds</p>
+        
+        <!-- Timer inside the quiz card -->
+        <div class="timer-container">
+            <div class="timer-circle"></div>
+            <span id="timer" class="timer-text">20</span>
+        </div>
+        
         <button id="next-btn" class="btn hidden">Next</button>
         <button id="submit-btn" class="btn hidden">Submit</button>
     </div>
 
     <div class="name-container hidden">
         <h2>Enter Your Name</h2>
-        <input type="text" id="username" placeholder="Your Name">
+        <!-- Decreased size of input box -->
+        <input type="text" id="username" placeholder="Your Name" class="input-small">
         <button id="save-score-btn" class="btn">Submit Score</button>
     </div>
 
