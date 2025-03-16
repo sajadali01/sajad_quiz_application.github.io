@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('F2.jpg');
+    background-image: url('F1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,3 +155,36 @@ body {
     color: red;
 }
 
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .start-container,
+    .quiz-container,
+    .name-container,
+    .leaderboard-container {
+        width: 80%;
+    }
+
+    .option, .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .start-container,
+    .quiz-container,
+    .name-container,
+    .leaderboard-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .option, .btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
